@@ -1529,3 +1529,27 @@ index f8df82b..0000000
 -            return self.perm < other.perm
 -        else:
 -            return self.class_ < other.class_
+diff --git a/tests/__init__.py b/tests/__init__.py
+index 75758e3..b210326 100644
+--- a/tests/__init__.py
++++ b/tests/__init__.py
+@@ -22,16 +22,16 @@ from . import constraintquery
+ from . import commonquery
+ from . import defaultquery
+ from . import diff
+-from . import dta
++#from . import dta
+ from . import fsusequery
+ from . import genfsconquery
+-from . import infoflow
++#from . import infoflow
+ from . import initsidquery
+ from . import mlsrulequery
+ from . import netifconquery
+ from . import nodeconquery
+ from . import objclassquery
+-from . import permmap
++#from . import permmap
+ from . import polcapquery
+ from . import policyrep
+ from . import rbacrulequery
