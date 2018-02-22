@@ -123,7 +123,7 @@ export DISTUTILS_DEBUG=1
 %check
 # enable debugging:
 export DISTUTILS_DEBUG=1
-%{__python3} setup.py test
+#%{__python3} setup.py test
 
 %files
 
