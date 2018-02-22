@@ -104,6 +104,8 @@ Python 3 modules designed to facilitate SELinux policy analysis.
 %setup -q -n %{name}-%{version}/%{name}
 cp %{SOURCE1} ./
 %patch0 -p1
+# removing unneeded tools + their tests
+rm -f tests/{dta.py,infoflow.py,permmap.py}
 
 %build
 # enable debugging:
