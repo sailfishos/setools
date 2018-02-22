@@ -34,6 +34,7 @@ License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
 Source0: %{name}-%{version}.tar.bz2
 Source1: setup.py
+Patch1: disable_unneeded_tools.patch
 #Patch1:         0001-Do-not-use-Werror-during-build.patch
 #Patch2:         0002-Do-not-export-use-setools.InfoFlowAnalysis-and-setoo.patch
 #Patch3:         0003-bswap_-macros-are-defined-in-byteswap.h.patch
@@ -102,6 +103,7 @@ Python 3 modules designed to facilitate SELinux policy analysis.
 %prep
 %setup -q -n %{name}-%{version}/%{name}
 cp %{SOURCE1} ./
+%patch0 -p1
 
 %build
 # Remove CFLAGS=... for noarch packages (unneeded)
