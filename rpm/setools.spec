@@ -106,15 +106,21 @@ cp %{SOURCE1} ./
 %patch0 -p1
 
 %build
+# enable debugging:
+export DISTUTILS_DEBUG=1
 # Remove CFLAGS=... for noarch packages (unneeded)
 CFLAGS="%{optflags}" %{__python3} setup.py build
 
 %install
 rm -rf %{buildroot}
 rm -rf %{buildroot}%{_bindir}
+# enable debugging:
+export DISTUTILS_DEBUG=1
 %{__python3} setup.py install --root %{buildroot}
 
 %check
+# enable debugging:
+export DISTUTILS_DEBUG=1
 %{__python3} setup.py test
 
 %files
