@@ -142,7 +142,9 @@ export DISTUTILS_DEBUG=1
 #%{_mandir}/man1/seinfoflow*
 
 %files -n python3-setools
-%license COPYING COPYING.GPL COPYING.LGPL
+%doc COPYING
+%doc COPYING.GPL
+%doc COPYING.LGPL
 # %doc AUTHORS ChangeLog KNOWN-BUGS NEWS README
 # For noarch packages: sitelib
 # %{python3_sitelib}/*
