@@ -1,0 +1,3 @@
+[submodule "setools"]
+	path = setools
+	url = https://github.com/TresysTechnology/setools/
