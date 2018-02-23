@@ -102,6 +102,7 @@ Python 3 modules designed to facilitate SELinux policy analysis.
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
+# upstream packaging isn't modular, so use modified build file
 cp %{SOURCE1} ./
 %patch0 -p1
 # removing unneeded tools + their tests (together for patch0)
