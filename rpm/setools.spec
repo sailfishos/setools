@@ -26,7 +26,7 @@
 %define python3_sitearch /%{_libdir}/python3.?/site-packages
 
 Name:           setools
-Version:        4.1.1
+Version:        4.2.0
 Release:        6%{?setools_pre_ver:.%{setools_pre_ver}}%{?dist}
 Summary:        Policy analysis tools for SELinux
 
