@@ -65,24 +65,6 @@ This package includes the following console tools:
   seinfo       List policy components.
   sesearch     Search rules (allow, type_transition, etc.)
 
-
-#%package     console-analyses
-#Summary:     Policy analysis command-line tools for SELinux
-#License:     GPLv2
-#Requires:    python3-setools = %{version}-%{release}
-#Requires:    libselinux >= %{selinux_ver}
-#Requires:    python3-networkx
-#
-#%description console-analyses
-#SETools is a collection of graphical tools, command-line tools, and
-#libraries designed to facilitate SELinux policy analysis.
-#
-#This package includes the following console tools:
-#
-#  sedta        Perform domain transition analyses.
-#  seinfoflow   Perform information flow analyses.
-
-
 %package     -n python3-setools
 Summary:     Policy analysis tools for SELinux  
 Obsoletes:   setools-libs < 4.0.0, setools-libs-tcl
@@ -132,12 +114,6 @@ export DISTUTILS_DEBUG=1
 %{_mandir}/man1/sediff*
 %{_mandir}/man1/seinfo*
 %{_mandir}/man1/sesearch*
-
-#%files console-analyses
-#%{_bindir}/sedta
-#%{_bindir}/seinfoflow
-#%{_mandir}/man1/sedta*
-#%{_mandir}/man1/seinfoflow*
 
 %files -n python3-setools
 %doc COPYING
