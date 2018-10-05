@@ -29,20 +29,14 @@ Name:           setools
 Version:        4.2.0
 Release:        6%{?setools_pre_ver:.%{setools_pre_ver}}%{?dist}
 Summary:        Policy analysis tools for SELinux
-
 License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
 Source0: %{name}-%{version}.tar.bz2
 Source1: setup.py
-Patch0: disable_unneeded_tools.patch
-#Patch1:         0001-Do-not-use-Werror-during-build.patch
-#Patch2:         0002-Do-not-export-use-setools.InfoFlowAnalysis-and-setoo.patch
-#Patch3:         0003-bswap_-macros-are-defined-in-byteswap.h.patch
-
+Patch0: disable_analysis_tools.patch
 Obsoletes:      setools < 4.0.0, setools-devel < 4.0.0
 BuildRequires:  flex,  bison
 BuildRequires:  glibc-devel, gcc
-#, git
 BuildRequires:  libsepol-devel >= %{sepol_ver}, libsepol-static >= %{sepol_ver}
 BuildRequires:  swig
 BuildRequires:  python3-devel

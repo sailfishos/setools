@@ -1,8 +1,8 @@
 diff --git a/setools/__init__.py b/setools/__init__.py
-index a84c846..b977b92 100644
+index 7b70f5e..4ccfa88 100644
 --- a/setools/__init__.py
 +++ b/setools/__init__.py
-@@ -74,11 +74,11 @@ from .pcideviceconquery import PcideviceconQuery
+@@ -73,11 +73,11 @@ from .pcideviceconquery import PcideviceconQuery
  from .devicetreeconquery import DevicetreeconQuery
  
  # Information Flow Analysis
@@ -18,10 +18,10 @@ index a84c846..b977b92 100644
  # Policy difference
  from .diff import PolicyDifference
 diff --git a/tests/__init__.py b/tests/__init__.py
-index 75758e3..b210326 100644
+index 75758e3..fc63689 100644
 --- a/tests/__init__.py
 +++ b/tests/__init__.py
-@@ -22,16 +22,16 @@ from . import constraintquery
+@@ -22,10 +22,10 @@ from . import constraintquery
  from . import commonquery
  from . import defaultquery
  from . import diff
@@ -34,10 +34,3 @@ index 75758e3..b210326 100644
  from . import initsidquery
  from . import mlsrulequery
  from . import netifconquery
- from . import nodeconquery
- from . import objclassquery
--from . import permmap
-+#from . import permmap
- from . import polcapquery
- from . import policyrep
- from . import rbacrulequery
