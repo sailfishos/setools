@@ -20,8 +20,8 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-%global sepol_ver 2.7-1
-%global selinux_ver 2.7-1
+%global sepol_ver 2.8-1
+%global selinux_ver 2.8-1
 
 %define python3_sitearch /%{_libdir}/python3.?/site-packages
 
