@@ -109,10 +109,15 @@ export DISTUTILS_DEBUG=1
 %files
 
 %files console
+%{_bindir}/apol
 %{_bindir}/sediff
+%{_bindir}/sedta
 %{_bindir}/seinfo
+%{_bindir}/seinfoflow
 %{_bindir}/sesearch
+%{_mandir}/man1/apol*
 %{_mandir}/man1/sediff*
+%{_mandir}/man1/sedta*
 %{_mandir}/man1/seinfo*
 %{_mandir}/man1/sesearch*
 
