@@ -36,13 +36,18 @@ URL:            https://github.com/TresysTechnology/setools/wiki
 Source0:        %{name}-%{version}.tar.bz2
 Patch0:         disable_analysis_tools.patch
 Obsoletes:      setools < 4.0.0, setools-devel < 4.0.0
-BuildRequires:  flex,  bison
-BuildRequires:  glibc-devel, gcc
-BuildRequires:  libsepol-devel >= %{sepol_ver}, libsepol-static >= %{sepol_ver}
+BuildRequires:  flex
+BuildRequires:  bison
+BuildRequires:  glibc-devel
+BuildRequires:  gcc
+BuildRequires:  libsepol-devel >= %{sepol_ver}
+BuildRequires:  libsepol-static >= %{sepol_ver}
+BuildRequires:  libselinux-devel >= %{selinux_ver}
 BuildRequires:  swig
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python3-Cython > 0.28
+
 
 # BuildArch:      
 Requires:       python3-%{name} = %{version}-%{release}
