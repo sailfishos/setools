@@ -89,8 +89,6 @@ Python 3 modules designed to facilitate SELinux policy analysis.
 # removing unneeded tools + their tests (together for patch0)
 rm -f setools/{dta.py,infoflow.py,permmap.py}
 rm -f tests/{dta.py,infoflow.py,permmap.py}
-rm -f apol seinfoflow sedta
-rm -f man/{apol*,sedta*,seinfoflow*}
 
 %build
 # enable debugging:
