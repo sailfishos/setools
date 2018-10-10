@@ -33,9 +33,8 @@ Release:        6%{?setools_pre_ver:.%{setools_pre_ver}}%{?dist}
 Summary:        Policy analysis tools for SELinux
 License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
-Source0: %{name}-%{version}.tar.bz2
-Source1: setup.py
-Patch0: disable_analysis_tools.patch
+Source0:        %{name}-%{version}.tar.bz2
+Patch0:         disable_analysis_tools.patch
 Obsoletes:      setools < 4.0.0, setools-devel < 4.0.0
 BuildRequires:  flex,  bison
 BuildRequires:  glibc-devel, gcc
@@ -81,8 +80,6 @@ Python 3 modules designed to facilitate SELinux policy analysis.
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
-# upstream packaging isn't modular, so use modified build file
-cp %{SOURCE1} ./
 %patch0 -p1
 # removing unneeded tools + their tests (together for patch0)
 rm -f setools/{dta.py,infoflow.py,permmap.py}
