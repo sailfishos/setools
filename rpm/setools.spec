@@ -76,7 +76,7 @@ This package includes the following console tools:
 Summary:     Policy analysis tools for SELinux  
 Obsoletes:   setools-libs < 4.0.0, setools-libs-tcl
 Provides: %{name}-python3 = %{version}-%{release}
-Provides: %{name}-python3%{?_isa} = %{version}-%{release}
+Provides: %{name}-python3 = %{version}-%{release}
 Obsoletes: %{name}-python3 < %{version}-%{release}
 
 %description -n python3-setools
