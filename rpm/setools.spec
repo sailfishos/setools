@@ -35,7 +35,6 @@ License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
 Source0:        %{name}-%{version}.tar.bz2
 Patch0:         disable_analysis_tools.patch
-Obsoletes:      setools < 4.0.0, setools-devel < 4.0.0
 BuildRequires:  flex
 BuildRequires:  bison
 BuildRequires:  glibc-devel
@@ -74,10 +73,8 @@ This package includes the following console tools:
 
 %package     -n python3-setools
 Summary:     Policy analysis tools for SELinux  
-Obsoletes:   setools-libs < 4.0.0, setools-libs-tcl
 Provides: %{name}-python3 = %{version}-%{release}
 Provides: %{name}-python3 = %{version}-%{release}
-Obsoletes: %{name}-python3 < %{version}-%{release}
 
 %description -n python3-setools
 SETools is a collection of graphical tools, command-line tools, and
