@@ -122,16 +122,17 @@ export DISTUTILS_DEBUG=1
 %{_bindir}/sediff
 %{_bindir}/seinfo
 %{_bindir}/sesearch
-%{_mandir}/man1/sediff*
-%{_mandir}/man1/seinfo*
-%{_mandir}/man1/sesearch*
+%exclude %{_mandir}/man1/sediff*
+%exclude %{_mandir}/man1/seinfo*
+%exclude %{_mandir}/man1/sesearch*
 
 %files -n python3-setools
 %doc COPYING
 %doc COPYING.GPL
 %doc COPYING.LGPL
-# %doc AUTHORS ChangeLog KNOWN-BUGS NEWS README
 # For noarch packages: sitelib
 # %{python3_sitelib}/*
 # For arch-specific packages: sitearch
+%exclude %{python3_sitearch}/setoolsgui
 %{python3_sitearch}/*
+
