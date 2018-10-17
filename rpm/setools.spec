@@ -29,7 +29,7 @@
 
 Name:           setools
 Version:        4.2.0
-Release:        6%{?setools_pre_ver:.%{setools_pre_ver}}
+Release:        1
 Summary:        Policy analysis tools for SELinux
 License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
@@ -45,7 +45,7 @@ BuildRequires:  libselinux-devel >= %{selinux_ver}
 BuildRequires:  swig
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
-BuildRequires:  python3-Cython > 0.28
+BuildRequires:  python3-cython > 0.28
 
 
 # BuildArch:      
