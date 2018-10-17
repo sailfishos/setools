@@ -116,9 +116,7 @@ export DISTUTILS_DEBUG=1
 #%{__python3} setup.py test
 
 %files
-
-%files console
-
+%defattr(-,root,root,-)
 %{_bindir}/sediff
 %{_bindir}/seinfo
 %{_bindir}/sesearch
@@ -127,6 +125,7 @@ export DISTUTILS_DEBUG=1
 %exclude %{_mandir}/man1/sesearch*
 
 %files -n python3-setools
+%defattr(-,root,root,-)
 %doc COPYING
 %doc COPYING.GPL
 %doc COPYING.LGPL
