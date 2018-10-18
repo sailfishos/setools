@@ -47,23 +47,13 @@ BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python3-cython > 0.28
 
-
-# BuildArch:      
 Requires:       python3-%{name} = %{version}-%{release}
+Requires:       python3-setools = %{version}-%{release}
+Requires:       libselinux >= %{selinux_ver}
 
 %description
-SETools is a collection of graphical tools, command-line tools, and
-Python modules designed to facilitate SELinux policy analysis.
-
-%package     console
-Summary:     Policy analysis command-line tools for SELinux
-License:     GPLv2
-Requires:    python3-setools = %{version}-%{release}
-Requires:    libselinux >= %{selinux_ver}
-
-%description console
-SETools is a collection of graphical tools, command-line tools, and
-libraries designed to facilitate SELinux policy analysis.
+SETools is a collection of command-line tools designed to
+facilitate SELinux policy analysis.
 
 This package includes the following console tools:
 
@@ -71,14 +61,13 @@ This package includes the following console tools:
   seinfo       List policy components.
   sesearch     Search rules (allow, type_transition, etc.)
 
-%package     -n python3-setools
-Summary:     Policy analysis tools for SELinux  
-Provides: %{name}-python3 = %{version}-%{release}
-Provides: %{name}-python3 = %{version}-%{release}
+%package        -n python3-setools
+Summary:        Policy analysis tools for SELinux
+Provides:       %{name}-python3 = %{version}-%{release}
 
 %description -n python3-setools
-SETools is a collection of graphical tools, command-line tools, and
-Python 3 modules designed to facilitate SELinux policy analysis.
+SETools python3 is a collection Python 3 modules designed to
+facilitate SELinux policy analysis.
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
