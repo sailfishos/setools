@@ -44,7 +44,7 @@ BuildRequires:  libsepol-static >= %{sepol_ver}
 BuildRequires:  libselinux-devel >= %{selinux_ver}
 BuildRequires:  swig
 BuildRequires:  python3-devel
-BuildRequires:  python-setuptools
+BuildRequires:  python3-setuptools
 BuildRequires:  python3-cython > 0.28
 
 Requires:       python3-%{name} = %{version}-%{release}
