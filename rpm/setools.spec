@@ -20,15 +20,15 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-%global sepol_ver 2.8
-%global selinux_ver 2.8
+%global sepol_ver 3.1
+%global selinux_ver 3.1
 
 %if ! %{defined python3_sitearch}
 %define python3_sitearch /%{_libdir}/python3.?/site-packages
 %endif
 
 Name:           setools
-Version:        4.2.0
+Version:        4.4.0
 Release:        1
 Summary:        Policy analysis tools for SELinux
 License:        GPLv2
@@ -96,8 +96,7 @@ rm -f %{buildroot}%{_mandir}/man1/apol*
 # Remove analysis tools and manuals
 rm -f %{buildroot}%{_bindir}/sedta
 rm -f %{buildroot}%{_bindir}/seinfoflow
-rm -f %{buildroot}%{_mandir}/man1/sedta*
-rm -f %{buildroot}%{_mandir}/man1/seinfoflow*
+rm -rf %{buildroot}%{_mandir}
 
 %check
 # enable debugging:
@@ -109,9 +108,6 @@ export DISTUTILS_DEBUG=1
 %{_bindir}/sediff
 %{_bindir}/seinfo
 %{_bindir}/sesearch
-%exclude %{_mandir}/man1/sediff*
-%exclude %{_mandir}/man1/seinfo*
-%exclude %{_mandir}/man1/sesearch*
 
 %files -n python3-setools
 %defattr(-,root,root,-)

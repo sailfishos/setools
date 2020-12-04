@@ -21,7 +21,7 @@ diff --git a/tests/__init__.py b/tests/__init__.py
 index 75758e3..fc63689 100644
 --- a/tests/__init__.py
 +++ b/tests/__init__.py
-@@ -22,10 +22,10 @@ from . import constraintquery
+@@ -22,12 +22,12 @@
  from . import commonquery
  from . import defaultquery
  from . import diff
@@ -29,6 +29,8 @@ index 75758e3..fc63689 100644
 +#from . import dta
  from . import fsusequery
  from . import genfsconquery
+ from . import ibendportconquery
+ from . import ibpkeyconquery
 -from . import infoflow
 +#from . import infoflow
  from . import initsidquery
