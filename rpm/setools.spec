@@ -28,7 +28,7 @@
 %endif
 
 Name:           setools
-Version:        4.4.0
+Version:        4.3.0
 Release:        1
 Summary:        Policy analysis tools for SELinux
 License:        GPLv2
