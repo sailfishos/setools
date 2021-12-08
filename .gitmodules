@@ -1,3 +1,3 @@
 [submodule "setools"]
 	path = setools
-	url = https://git.merproject.org/mirror/setools.git
+	url = https://github.com/sailfishos-mirror/setools.git
