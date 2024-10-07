@@ -20,21 +20,20 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-%global sepol_ver 3.1
-%global selinux_ver 3.1
+%global sepol_ver 3.6
+%global selinux_ver 3.6
 
 %if ! %{defined python3_sitearch}
 %define python3_sitearch /%{_libdir}/python3.?/site-packages
 %endif
 
 Name:           setools
-Version:        4.3.0
+Version:        4.4.4
 Release:        1
 Summary:        Policy analysis tools for SELinux
 License:        GPLv2
 URL:            https://github.com/TresysTechnology/setools/wiki
 Source0:        %{name}-%{version}.tar.bz2
-Patch0:         disable_analysis_tools.patch
 BuildRequires:  flex
 BuildRequires:  bison
 BuildRequires:  glibc-devel
@@ -71,10 +70,6 @@ facilitate SELinux policy analysis.
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
-%patch0 -p1
-# removing unneeded tools + their tests (together for patch0)
-rm -f setools/{dta.py,infoflow.py,permmap.py}
-rm -f tests/{dta.py,infoflow.py,permmap.py}
 
 %build
 # enable debugging:
@@ -83,8 +78,6 @@ export DISTUTILS_DEBUG=1
 CFLAGS="%{optflags}" %{__python3} setup.py build
 
 %install
-rm -rf %{buildroot}
-rm -rf %{buildroot}%{_bindir}
 # enable debugging:
 export DISTUTILS_DEBUG=1
 %{__python3} setup.py install --root %{buildroot}
@@ -104,13 +97,13 @@ export DISTUTILS_DEBUG=1
 #%{__python3} setup.py test
 
 %files
-%defattr(-,root,root,-)
+%license COPYING.GPL
+%{_bindir}/sechecker
 %{_bindir}/sediff
 %{_bindir}/seinfo
 %{_bindir}/sesearch
 
 %files -n python3-setools
-%defattr(-,root,root,-)
 %doc COPYING
 %doc COPYING.GPL
 %doc COPYING.LGPL
