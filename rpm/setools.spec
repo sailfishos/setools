@@ -23,10 +23,6 @@
 %global sepol_ver 3.6
 %global selinux_ver 3.6
 
-%if ! %{defined python3_sitearch}
-%define python3_sitearch /%{_libdir}/python3.?/site-packages
-%endif
-
 Name:           setools
 Version:        4.4.4
 Release:        1
